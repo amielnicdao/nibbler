@@ -42,16 +42,6 @@ router.put("/burgers/:id", function(req, res) {
   });
 });
 
-router.delete("/burgers/:id", function(req, res) {
-  var hasEaten = "id = " + req.params.id;
-
-  burger.deleteOne(hasEaten, function(result) {
-    if (result.affectedRows == 0) {
-      return res.status(404).end();
-    } else {
-      res.status(200).end();
-    }
-  });
-});
-
 module.exports = router;
+
+//should be good

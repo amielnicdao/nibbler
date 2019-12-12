@@ -3,22 +3,17 @@ var orm = require("../config/orm.js");
 
 var burger = {
   selectAll: function(cb) {
-    orm.all("burgers", function(res) {
+    orm.selectAll("burgers", function(res) {
       cb(res);
     });
   },
   insertOne: function(cols, vals, cb) {
-    orm.insert("burgers", cols, vals, function(res) {
+    orm.insertOne("burgers", cols, vals, function(res) {
       cb(res);
     });
   },
   updateOne: function(objColVals, hasEaten, cb) {
-    orm.update("burgers", objColVals, hasEaten, function(res) {
-      cb(res);
-    });
-  },
-  deleteOne: function(hasEaten, cb) {
-    orm.delete("burgers", hasEaten, function(res) {
+    orm.updateOne("burgers", objColVals, hasEaten, function(res) {
       cb(res);
     });
   }
@@ -26,3 +21,5 @@ var burger = {
 
 // Export the database functions for the controller.
 module.exports = burger;
+
+//should be good
