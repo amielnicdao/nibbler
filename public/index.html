@@ -19,19 +19,33 @@
             <h1 class="display-4">Nibbler</h1>
             <p class="lead">Add a mouth-watering burger!</p>
         </div>
-        <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="What's your favorite burger?" aria-label="Recipient's username"
-                aria-describedby="button-addon2">
-            <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Yum!!</button>
-            </div>
-        </div>
 
+        <form id="addburger">
+            <div class="form-row align-items-center">
+                <div class="col-sm-3 my-1">
+                    <label class="sr-only" for="inlineFormInputName">Name</label>
+                    <input type="text" class="form-control" id="faveburger" placeholder="What's your favorite burger?">
+                </div>
+                <div class="col-auto my-1">
+                    <button type="submit" class="btn btn-outline-info">Yum!!</button>
+                </div>
+            </div>
     </div>
 
-   <ul id="burgers"></ul> 
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h2>Menu</h2>
+                <ul id="burgers"></ul>
 
+            </div>
+            <div class="col-sm-6">
+                <h2>Eaten</h2>
+                <ul id="hasEaten"></ul>
+            </div>
 
+        </div>
+    </div>
 
 
     <script src="https://code.jquery.com/jquery.js"></script>
@@ -39,11 +53,3 @@
 </body>
 
 </html>
-
-<!-- <ul id="burgers"></ul>
-
-<h2>Add a Burger</h2>
-<form id="addBurger" class="button-size">
-  <textarea type="text" name="burger"></textarea>
-  <button type="submit">Yum!!</button>
-</form> -->
