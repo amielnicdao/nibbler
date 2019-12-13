@@ -15,7 +15,7 @@ $(document).ready(function () {
                 "<li>" + burgers[i].burger_name + "<button class='devour-burger' data-id='" + burgers[i].id +
                 "' data-devour='" + !burgers[i].devoured + "'>Devour</button></div></li>";
             var delete_elem =
-                "<li>" + burgers[i].burger_name + "<button class='delete' data-id='" + burgers[i].id + "'>Delete</button></div</li>";
+                "<li>" + burgers[i].burger_name + "<button class='delete-burger' data-id='" + burgers[i].id + "'>Delete</button></div</li>";
 
             if (!burgers[i].devoured) {
                 menu.append(devour_elem);
@@ -66,7 +66,7 @@ $(document).ready(function () {
     });
 
     // Delete a burger
-    $(document).on("click", ".delete", function (event) {
+    $(document).on("click", ".delete-burger", function (event) {
         event.preventDefault();
 
         var id = $(this).data("id");
